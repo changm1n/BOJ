@@ -1,28 +1,32 @@
 s = input()
 s1 = s.upper()
-c=0
-b = 0
-a = s1.count(s1[0])
+a = []
+a1 = []
+d = 0
+c = 0
+for i in range(len(s)):
+    b = s1.count(s1[i])
+    a.append(b)
+a1 = a.copy()
+a.sort(reverse=True)
 if len(s) == 1:
     print(s1)
-for i in range(len(s)-1):
-    if s1[i] == s1[i+1]:
-        i += 1
-    elif a < s1.count(s1[i+1]):
-        a = s1.count(s1[i+1])
-        b = s1[i+1]
-    else:
-        b = s1[i]
-for j in range(len(s)):
-    if b == s1[j]:
-        print(b)
-        c += 1
-        break
-    elif a == s1.count(s1[j]) and len(s) != 1:
-        print("?")
-        c += 1
-        break
-if c == 0 and len(s) != 1:
-    print(b)
+else:
+    for i in range(len(a1)-1):
+        if a1[0] < a1 [i+1]:
+            a1[0] = a1[i+1]      
+            c = i + 1
+        else: c += 1
+        if s1[c] == s1[i+1]:
+            d += 1
+if d == a.count(a[0]):
+    print(s1[0])
+elif  len(a) != 1 and a[0] == a[1]:
+    print("?")
+elif len(a) != 1:
+    print(s1[c])
+
+    
+
 
 
