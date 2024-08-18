@@ -1,6 +1,5 @@
 N = int(input())
 list = []
-result= []
 for i in range(N):
     a = str(input())
     if(list.count(a) == 0):
