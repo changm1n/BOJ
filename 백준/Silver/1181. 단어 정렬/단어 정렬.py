@@ -1,11 +1,11 @@
 N = int(input())
-list = []
+d = []
 result= []
 for i in range(N):
     a = str(input())
-    if(list.count(a) == 0):
-        list.append(a)
-result = sorted(list) 
+    d.append(a)
+b = list(set(d))
+result = sorted(b) 
 result.sort(key=len) 
 for i in result:
     print(i,end='\n')
